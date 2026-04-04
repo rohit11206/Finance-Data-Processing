@@ -1,0 +1,575 @@
+{
+  "info": {
+    "_postman_id": "7257d092-009b-40b7-a5af-5046d5541eb1",
+    "name": "Fanance-And-analyst",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33275627"
+  },
+  "item": [
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Dashboard",
+          "item": [
+            {
+              "name": "getsummary",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTM0MTUxNSwiZXhwIjoxNzc1MzQ1MTE1fQ.90S2fz2QobF8YpiLu8p7Ypz_KKkpzWzdts1zTulL-CA",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/dashboard/summary",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "dashboard",
+                    "summary"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "category-stats",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTM0MTUxNSwiZXhwIjoxNzc1MzQ1MTE1fQ.90S2fz2QobF8YpiLu8p7Ypz_KKkpzWzdts1zTulL-CA",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/dashboard/category-stats",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "dashboard",
+                    "category-stats"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "monthly-trends",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTM0MTUxNSwiZXhwIjoxNzc1MzQ1MTE1fQ.90S2fz2QobF8YpiLu8p7Ypz_KKkpzWzdts1zTulL-CA",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/dashboard/monthly-trends",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "dashboard",
+                    "monthly-trends"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "New Request",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "UserControl",
+          "item": [
+            {
+              "name": "getAllusers",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMzNzQyNiwiZXhwIjoxNzc1MzQxMDI2fQ.cLLiK3oxIwatlVi7Q-8lDasgm275qhVUMrX4rKNKzcU",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "\"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMzNzQyNiwiZXhwIjoxNzc1MzQxMDI2fQ.cLLiK3oxIwatlVi7Q-8lDasgm275qhVUMrX4rKNKzcU\"",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3000/api/users/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "users",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "updateuser",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMzNzQyNiwiZXhwIjoxNzc1MzQxMDI2fQ.cLLiK3oxIwatlVi7Q-8lDasgm275qhVUMrX4rKNKzcU",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "\"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMzNzQyNiwiZXhwIjoxNzc1MzQxMDI2fQ.cLLiK3oxIwatlVi7Q-8lDasgm275qhVUMrX4rKNKzcU\"",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"role\":\"analyst\",\r\n    \"status\":\"active\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/users/:id",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "users",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "69d1807ae61195b16ef53dc8"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getUserById",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTM0MTUxNSwiZXhwIjoxNzc1MzQ1MTE1fQ.90S2fz2QobF8YpiLu8p7Ypz_KKkpzWzdts1zTulL-CA",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/users/:id",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "users",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "69d1807ae61195b16ef53dc8"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Record",
+          "item": [
+            {
+              "name": "getallrecord",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMzNzQyNiwiZXhwIjoxNzc1MzQxMDI2fQ.cLLiK3oxIwatlVi7Q-8lDasgm275qhVUMrX4rKNKzcU",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "\"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMzNzQyNiwiZXhwIjoxNzc1MzQxMDI2fQ.cLLiK3oxIwatlVi7Q-8lDasgm275qhVUMrX4rKNKzcU\"",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"role\":\"analyst\",\r\n    \"status\":\"active\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/records/:id",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "records",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "69d189465e59b596b202be8b"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "getRecordById",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTM0Mjg3OCwiZXhwIjoxNzc1MzQ2NDc4fQ.NibBGTiK2VbaSSB3rcoCzP4Suk-9L5sVlMQashJTW5A",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/records/:id",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "records",
+                    ":id"
+                  ],
+                  "variable": [
+                    {
+                      "key": "id",
+                      "value": "69d189465e59b596b202be8b"
+                    }
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "CreatedRecord",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTM0Mjg3OCwiZXhwIjoxNzc1MzQ2NDc4fQ.NibBGTiK2VbaSSB3rcoCzP4Suk-9L5sVlMQashJTW5A",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"title\": \"Monthly Salary\",\r\n  \"amount\": 80000,\r\n  \"type\": \"income\",\r\n  \"category\": \"salary\",\r\n  \"date\": \"2026-04-01\",\r\n  \"notes\": \"April salary credited\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/records/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "records",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n\"email\":\"admin@gmail.com\",\r\n\"password\":\"admin123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "auth",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "item": [
+        {
+          "name": "Auth",
+          "item": [
+            {
+              "name": "register",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/auth/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "auth",
+                    ""
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "login",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rohitvp11206chauhan@gmail.com\",\r\n    \"password\":\"20150211411Lala@\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/auth/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "auth",
+                    "login"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "forgetpassward",
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"rohitvp11206chauhan@gmail.com\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/auth/forgot-password",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "auth",
+                    "forgot-password"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "resetpassward",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Record",
+          "item": [
+            {
+              "name": "CreateRecord",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMzNzQyNiwiZXhwIjoxNzc1MzQxMDI2fQ.cLLiK3oxIwatlVi7Q-8lDasgm275qhVUMrX4rKNKzcU",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Authorization",
+                    "value": "\"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5ZDE3N2VjZTYxMTk1YjE2ZWY1M2RjNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3NTMzNzQyNiwiZXhwIjoxNzc1MzQxMDI2fQ.cLLiK3oxIwatlVi7Q-8lDasgm275qhVUMrX4rKNKzcU\"",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"role\":\"analyst\",\r\n    \"status\":\"active\"\r\n}"
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/records",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "records"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "DashBoard",
+          "item": [
+            {
+              "name": "summary",
+              "request": {
+                "method": "GET",
+                "header": []
+              },
+              "response": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Analyst",
+      "item": []
+    }
+  ]
+}
