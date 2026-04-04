@@ -204,6 +204,7 @@ MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_secret
 EMAIL_USER=your_email
 EMAIL_PASS=your_email_password
+ADMIN_PASSWORD=Your_admin_password
 ```
 
 ---
