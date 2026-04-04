@@ -11,7 +11,7 @@ export const getAllRecords = async (req, res) => {
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     const records = await Record.find(query)
-     .populate("user", "name email")
+     .populate("createdBy", "name email")
      .sort({ date: -1 })
      .skip((page - 1) * limit)
      .limit(limit);
@@ -30,7 +30,7 @@ export const getAllRecords = async (req, res) => {
 };
 export const getRecordById = async (req, res) => {
   try {
-    const record = await Record.findById(req.params.id).populate("user", "name email");
+    const record = await Record.findById(req.params.id).populate("createdBy", "name email");
     if (!record) {
       return res.status(404).json({
         success: false,
@@ -61,8 +61,6 @@ export const createRecord = async (req, res) => {
       });
     }
 
-    console.log("Body:", result.data);
-    console.log("User:", req.user);
 
     const { title, date, amount, category, type, notes } = result.data;
 

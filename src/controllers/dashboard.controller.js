@@ -7,7 +7,7 @@ export const getSummary = async (req, res) => {
 
     // Only own data for normal users
     if (req.user.role === "user") {
-      match.user = req.user.id;
+      match.createdBy = req.user._id;
     }
 
     const income = await Record.aggregate([
@@ -47,7 +47,7 @@ export const getCategoryStats = async (req, res) => {
     let match = {};
 
     if (req.user.role === "user") {
-      match.user = req.user.id;
+      match.createdBy = req.user._id;
     }
 
     const data = await Record.aggregate([
@@ -81,7 +81,7 @@ export const getMonthlyTrends = async (req, res) => {
     let match = {};
 
     if (req.user.role === "user") {
-      match.user = req.user.id;
+      match.createdBy = req.user._id;
     }
 
     const data = await Record.aggregate([
@@ -118,11 +118,11 @@ export const getRecentRecords = async (req, res) => {
     let query = {};
 
     if (req.user.role === "user") {
-      query.user = req.user.id;
+      query.createdBy = req.user._id;
     }
 
     const records = await Record.find(query)
-      .populate("user", "name email")
+      .populate("createdBy", "name email")
       .sort({ date: -1 })
       .limit(5);
 
