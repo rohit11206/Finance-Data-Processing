@@ -1,5 +1,5 @@
-import { Record } from "../models/Record.model";
-import { recordSchema,updateRecordSchema } from "../Validation/record.validation";
+import { Record } from "../models/Record.model.js";
+import { recordSchema,updateRecordSchema } from "../Validation/record.validation.js";
 
 export const getAllRecords = async (req, res) => {
   try {
@@ -52,34 +52,47 @@ export const getRecordById = async (req, res) => {
 export const createRecord = async (req, res) => {
   try {
     const result = recordSchema.safeParse(req.body);
+
     if (!result.success) {
       return res.status(400).json({
         success: false,
         message: "Validation failed",
         errors: result.error.flatten().fieldErrors,
       });
-    }   
-    const { date, amount, category, description } = result.data;
+    }
+
+    console.log("Body:", result.data);
+    console.log("User:", req.user);
+
+    const { title, date, amount, category, type, notes } = result.data;
+
     const newRecord = new Record({
-      user: req.user._id,   
-        date,
-        amount,
-        category,
-        description,
-    }); 
+      createdBy: req.user._id,
+      title,
+      date,
+      amount,
+      category,
+      type,       
+      notes      
+    });
+
     await newRecord.save();
+
     res.status(201).json({
       success: true,
-        message: "Record created successfully",
-        data: newRecord,
+      message: "Record created successfully",
+      data: newRecord,
     });
+
   } catch (error) {
     console.error("Create Record Error:", error.message);
+    console.log("request body:", req.body);
+
     res.status(500).json({
-        success: false, 
-        message: 'Server error while creating record'
+      success: false,
+      message: "Server error while creating record",
     });
-  } 
+  }
 };
 export const updateRecord = async (req, res) => {
   try {

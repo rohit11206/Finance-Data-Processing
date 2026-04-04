@@ -8,7 +8,7 @@ import { loginSchema,registerSchema } from '../Validation/auth.validation.js';
 import { generateToken } from '../utils/jwt.js';
 
 
-export const regester= async (req, res) => {
+export const register= async (req, res) => {
   try {
     const result =registerSchema.safeParse(req.body);
 

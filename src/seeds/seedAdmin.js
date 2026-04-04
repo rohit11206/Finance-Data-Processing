@@ -1,6 +1,6 @@
 import { User } from "../models/User.model.js";
 import bcrypt from "bcrypt";
-import dotenv from "dotenv";
+
 
 export const seedAdmin = async () => {
   try {
