@@ -6,8 +6,8 @@ export const getAllRecords = async (req, res) => {
     let query = {};
 
     if (req.user.role === "user") {
-      query.user = req.user.id;
-    }
+     query.createdBy = req.user._id;
+   }
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     const records = await Record.find(query)
