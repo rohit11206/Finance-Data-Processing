@@ -9,7 +9,7 @@ export const getSummary = async (req, res) => {
     if (req.user.role === "user") {
       match.createdBy = req.user._id;
     }
-
+     match.isDeleted = { $ne: true }
     const income = await Record.aggregate([
       { $match: { ...match, type: "income" } },
       { $group: { _id: null, total: { $sum: "$amount" } } },
@@ -49,7 +49,7 @@ export const getCategoryStats = async (req, res) => {
     if (req.user.role === "user") {
       match.createdBy = req.user._id;
     }
-
+    match.isDeleted = { $ne: true }
     const data = await Record.aggregate([
       { $match: match },
       {
@@ -83,7 +83,7 @@ export const getMonthlyTrends = async (req, res) => {
     if (req.user.role === "user") {
       match.createdBy = req.user._id;
     }
-
+    match.isDeleted = { $ne: true }
     const data = await Record.aggregate([
       { $match: match },
       {
@@ -120,7 +120,7 @@ export const getRecentRecords = async (req, res) => {
     if (req.user.role === "user") {
       query.createdBy = req.user._id;
     }
-
+    query.isDeleted = { $ne: true }
     const records = await Record.find(query)
       .populate("createdBy", "name email")
       .sort({ date: -1 })

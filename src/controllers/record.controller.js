@@ -8,6 +8,7 @@ export const getAllRecords = async (req, res) => {
     if (req.user.role === "user") {
      query.createdBy = req.user._id;
    }
+    query.isDeleted = false;
     const page = parseInt(req.query.page) || 1;
     const limit = parseInt(req.query.limit) || 10;
     const records = await Record.find(query)
@@ -126,7 +127,11 @@ export const updateRecord = async (req, res) => {
 };  
 export const deleteRecord = async (req, res) => {
   try {
-    const record = await Record.findByIdAndDelete(req.params.id);       
+    const record = await Record.findByIdAndUpdate(
+       req.params.id,
+       { isDeleted: true },
+       { new: true }
+     );      
     if (!record) {
       return res.status(404).json({
         success: false, 
